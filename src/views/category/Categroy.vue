@@ -1,5 +1,5 @@
 <template>
-  <h1>首页</h1>
+  <h1>分类页面</h1>
 </template>
 
 <script lang='ts'>
@@ -16,5 +16,5 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 </style>

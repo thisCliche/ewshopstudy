@@ -1,6 +1,4 @@
-<template>
-  <h1>首页</h1>
-</template>
+<template><h1>个人中心</h1>template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
@@ -16,5 +14,5 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 </style>
