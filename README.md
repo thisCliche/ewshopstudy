@@ -1,4 +1,4 @@
-# ewshopstudy
+# ewshop
 
 ## Project setup
 ```

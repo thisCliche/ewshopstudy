@@ -1,20 +1,49 @@
 <template>
-  <h1>首页</h1>
+  <div class="home">
+      {{banner}}
+  </div>
 </template>
 
-<script lang='ts'>
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: '',
-  setup() {
+<script>
+import {ref, onMounted} from 'vue';
+import {getHomeAllData, getBanner} from "network/home";
+
+export default {
+  name: 'Home',
+
+  setup(){
+      const banner = ref([]);
+
+      onMounted(()=>{
+        getHomeAllData().then(res=>{
+
+              banner.value = res.slides;
+
+
+        }).catch(err=>{
+
+        })
+
+      })
+
+      return {
+        banner
+      }
   },
-  components: {},
-  computed: {},
-  methods: {},
-  created() { },
-  mounted() { },
-})
+
+  components: {
+
+  }
+}
 </script>
 
-<style scoped>
+<style>
+  #demo {
+    background:url('~assets/images/3.png') no-repeat;
+    width:100px;
+    height:100px;
+  }
+  .demo1 {
+    color:var(--color-high-text)
+  }
 </style>
